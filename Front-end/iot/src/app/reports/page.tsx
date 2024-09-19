@@ -1,13 +1,19 @@
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 import React from "react";
-import Sidebar from "../../components/Sidebar";
 
-export default function Reports() {
+
+export default function Home() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="flex-1 p-4">
-        <h1>Reports</h1>
+      <div className="flex-1">
+        <Header title="Relatórios" username="Rafael Rodrigues" />
+        <main>
+        <h1>Relatórios</h1>
       </main>
+      </div>
     </div>
+
   );
 }

@@ -1,13 +1,19 @@
+import Sidebar from "@/components/Sidebar";
+import Header from "@/components/Header";
 import React from "react";
-import Sidebar from "../../components/Sidebar";
 
-export default function User() {
+
+export default function Home() {
   return (
     <div className="flex">
       <Sidebar />
-      <main className="flex-1 p-4">
-        <h1>Users</h1>
+      <div className="flex-1">
+        <Header title="Usuários" username="Rafael Rodrigues" />
+        <main>
+        <h1>Lista dos Usuários</h1>
       </main>
+      </div>
     </div>
-  )
+
+  );
 }
