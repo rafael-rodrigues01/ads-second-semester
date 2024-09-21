@@ -1,10 +1,10 @@
 'use client';
-import Sidebar from '@/components/Sidebar';
-import Header from '@/components/Header';
-import Card from '@/components/Card';
+import Sidebar from '@/components/layouts/Sidebar';
+import Header from '@/components/layouts/Header';
+import Card from '@/components/cards/Card';
 import React from 'react';
-import LineChart from '../components/dashboard/LineChart';
-import DashDataFrame from '@/components/dashboard/DataTable';
+import LineChart from '../components/charts/LineChart';
+import DashDataFrame from '@/components/tables/DataTable';
 
 export default function Home() {
   return (
