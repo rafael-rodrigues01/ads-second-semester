@@ -63,3 +63,9 @@
 .card-body {
   @apply mt-1 mb-3 flex-1 flex flex-col justify-center items-center;
 }
+
+.formLabel {
+  @apply block text-sm font-medium text-gray-700;
+}
+
+
