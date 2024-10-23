@@ -1,0 +1,49 @@
+# Ignore bin and obj folders
+bin/
+obj/
+
+# User-specific files
+*.rsuser
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# Auto-generated files
+*.vspscc
+*.vssscc
+.vscode/
+
+# Logs
+*.log
+
+# Visual Studio Code
+.vscode/
+
+# Rider
+.idea/
+
+# Dependency directories
+node_modules/
+wwwroot/lib/
+
+# Static assets auto-generated during the build
+staticwebassets/
+
+# Ignore debug and release configurations
+Debug/
+Release/
+
+# ASP.NET Scaffolding files
+.scaffolding
+
+# Configuration files
+appsettings*.json
+secrets.json
+
+# DotNet user secrets
+*.secrets.json
+
+# Rider specific
+.idea/
+.idea_modules/
