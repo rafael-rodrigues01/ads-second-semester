@@ -1,0 +1,3 @@
+# Ignorar arquivos e pastas gerados pela compilação
+bin/
+obj/
