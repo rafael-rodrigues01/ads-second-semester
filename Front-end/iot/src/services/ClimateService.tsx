@@ -1,26 +1,18 @@
-import axios from "axios";
-
-interface ClimateData {
-  labels: string[];
-  datasets: {
-    label: string;
-    data: number[];
-    borderColor: string;
-    backgroundColor: string; // Corrected to 'backgroundColor'
-    fill: boolean; // Corrected spelling to 'fill'
-    tension: number;
-  }[];
-}
+import axios from 'axios';
 
 // Corrected a typo in the URL parameter
 export const fetchClimateData = async (): Promise<ClimateData> => {
   try {
-    const response = await axios.get('https://api.open-meteo.com/v1/forecast?latitude=-23.4772271&longitude=-47.5492724&past_days=2&hourly=temperature_2m,relativehumidity_2m,wind_speed_10m');
+    const response = await axios.get(
+      'https://api.open-meteo.com/v1/forecast?latitude=-23.4772271&longitude=-47.5492724&past_days=2&hourly=temperature_2m,relativehumidity_2m,wind_speed_10m'
+    );
 
-    const { hourly } = response.data;
+    const {hourly} = response.data;
 
     return {
-      labels: hourly.time.map((time: string) => new Date(time).toLocaleDateString()),
+      labels: hourly.time.map((time: string) =>
+        new Date(time).toLocaleDateString()
+      ),
       datasets: [
         {
           label: 'Temperatura (ºC)',

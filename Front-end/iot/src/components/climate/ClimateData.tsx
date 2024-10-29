@@ -1,11 +1,10 @@
-"use client"
+'use client';
 
-import { useState, useEffect } from "react";
-import ClimateChart from "../charts/ClimateChart";
-import { fetchClimateData } from "@/services/ClimateService";
+import {useState, useEffect} from 'react';
+import ClimateChart from '../charts/ClimateChart';
+import {fetchClimateData} from '@/services/ClimateService';
 
 const ClimateData: React.FC = () => {
-
   const [chartData, setChartData] = useState<ClimateData | null>(null);
 
   useEffect(() => {
@@ -15,7 +14,6 @@ const ClimateData: React.FC = () => {
         setChartData(data);
       } catch (error) {
         console.log('Erro ao requisitar os dados: ', error);
-        
       }
     };
     getClimateData();
@@ -23,16 +21,18 @@ const ClimateData: React.FC = () => {
 
   return (
     <div>
-      { chartData ? (
-        <ClimateChart labels={chartData.labels} datasets={chartData.datasets} 
-        xlabel="Data e Hora" ylabel="Valor" />
-        
+      {chartData ? (
+        <ClimateChart
+          labels={chartData.labels}
+          datasets={chartData.datasets}
+          xlabel="Data e Hora"
+          ylabel="Valor"
+        />
       ) : (
         <p>Carregando dados...</p>
-      ) }
-      
+      )}
     </div>
-  )
-}
+  );
+};
 
 export default ClimateData;
