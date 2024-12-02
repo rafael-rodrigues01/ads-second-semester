@@ -1,0 +1,74 @@
+{
+	"folders": [
+		{
+			"path": "Adapter"
+		},
+		{
+			"path": "Facade"
+		},
+		{
+			"path": "Composite"
+		},
+		{
+			"path": "Brigde"
+		},
+		{
+			"path": "Singleton"
+		},
+		{
+			"path": "Observer"
+		},
+		{
+			"path": "Mediator"
+		},
+		{
+			"path": "Chain"
+		},
+		{
+			"path": "Flyweight"
+		},
+		{
+			"path": "Proxy"
+		},
+		{
+			"path": "Builder"
+		},
+		{
+			"path": "FactoryMethod"
+		},
+		{
+			"path": "AbstractFactory"
+		},
+		{
+			"path": "Prototype"
+		},
+		{
+			"path": "Memento"
+		},
+		{
+			"path": "TemplateMethod"
+		},
+		{
+			"path": "State"
+		},
+		{
+			"path": "Strategy"
+		},
+		{
+			"path": "Command"
+		},
+		{
+			"path": "Interpreter"
+		},
+		{
+			"path": "Decorator"
+		},
+		{
+			"path": "Iterator"
+		},
+		{
+			"path": "Visitor"
+		}
+	],
+	"settings": {}
+}
