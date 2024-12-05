@@ -5,6 +5,7 @@ class Sistema:
     def __init__(self):
         self.usuarios = {}
         self.tentativas_erradas = {}
+        self.limite_tentativas = 0
 
     def criar_usuario(self, login, nome, senha):
         self.usuarios[login] = {"nome": nome, "senha": senha, "tentativas": 0, "bloqueado": False}
@@ -20,7 +21,8 @@ class Sistema:
         
         if senha != usuario["senha"]:
             usuario["tentativas"] += 1
-            if usuario["tentativas"] >= 2:
+
+            if usuario["tentativas"] >= self.limite_tentativas:
                 usuario["bloqueado"] = True
                 return "Conta bloqueada!"
             return "Senha incorreta!"
