@@ -10,7 +10,7 @@ class Sistema:
     def criar_usuario(self, login, nome, senha):
         self.usuarios[login] = {"nome": nome, "senha": senha, "tentativas": 0, "bloqueado": False}
 
-    def entrar_no_sistema(self, login, senha):
+    def entrar_no_sistema(self, context, login, senha):
         if login not in self.usuarios:
             return "Usuário não encontrado!"
 
@@ -22,7 +22,7 @@ class Sistema:
         if senha != usuario["senha"]:
             usuario["tentativas"] += 1
 
-            if usuario["tentativas"] >= self.limite_tentativas:
+            if usuario["tentativas"] >= context.limite_tentativas:
                 usuario["bloqueado"] = True
                 return "Conta bloqueada!"
             return "Senha incorreta!"
@@ -42,7 +42,7 @@ def step_limite_tentativas(context, limite):
 
 @when('eu tento entrar no sistema com login "{login}" e senha "{senha}"')
 def step_entrar_no_sistema(context, login, senha):
-    context.mensagem = sistema.entrar_no_sistema(login, senha)
+    context.mensagem = sistema.entrar_no_sistema(context, login, senha)
 
 @then('eu recebo a mensagem de erro "{mensagem}"')
 def step_verificar_mensagem(context, mensagem):
